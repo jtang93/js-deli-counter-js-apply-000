@@ -1,6 +1,7 @@
-function takeANumber (katzDeliLine, newPerson) {
-  katzDeliLine.push(newPerson);
-  return "Welcome, " + newPerson + ". You are number " + katzDeliLine.length + " in line.";
+var ticket = 1;
+
+function takeANumber () {
+  return ticket++;
 }
 
 function nowServing (katzDeliLine) {
@@ -18,7 +19,7 @@ function currentLine (katzDeliLine) {
     }
   else {
     var line = "";
-    katzDeliLine.forEach(function(element, id, array) {
+    katzDeliLine.forEach(function(element, id) {
       if (id < katzDeliLine.length - 1) {
         line += (id + 1) + ". " + element + ", ";
       }
